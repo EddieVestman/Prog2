@@ -10,22 +10,35 @@ namespace Polymorfismupg1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Vill du räkna på en rätvinklig traingle eller rektangel?");
-               
-            Console.WriteLine("Skriv in en höjd och bredd");
-            int width = Convert.ToInt32(Console.ReadLine());
-            int height = Convert.ToInt32(Console.ReadLine());
-            Rectangle rec = new Rectangle(width, height);
-            Triangle tri = new Triangle(width, height);
+            Console.WriteLine("Vill du räkna på en rätvinklig triangel eller rektangel?");
+            string answer = Console.ReadLine();
+
+            if (answer == "triangel")
+            {
+                Console.WriteLine("Skriv in en höjd och bredd");
+                int width = Convert.ToInt32(Console.ReadLine());
+                int height = Convert.ToInt32(Console.ReadLine());
+                Shape tri = new Triangle(width, height);
+                Console.WriteLine(tri.Area());
+                Console.WriteLine(tri.circumferance());
+
+            }
+            else if (answer == "recntagle")
+            {
+                Console.WriteLine("Skriv in en höjd och bredd");
+                int width = Convert.ToInt32(Console.ReadLine());
+                int height = Convert.ToInt32(Console.ReadLine());
+                Shape rec = new Rectangle(width, height);
+                Console.WriteLine(rec.Area());
+                Console.WriteLine(rec.circumferance());
+            }
+            else
+            {
+                Console.WriteLine("Välj en!");
 
 
-            Console.WriteLine(rec.Area());
-            Console.WriteLine(tri.Area());
-            Console.WriteLine(rec.circumferance());
-            Console.WriteLine(tri.circumferance());
+            }
 
-            Shape shape = new Triangle(width, height);
-            Shape shape1 = new Rectangle(width, height);
 
         }
     }
