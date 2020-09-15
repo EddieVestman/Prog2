@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interface1
+namespace Polymorfismupg1
 {
     class Rectangle : Shape
     {
-        private int width;
-        private int height;
-        public Rectangle(int height, int width) 
+        public Rectangle(int height, int width) : base(height, width)
         {
-            this.height = height;
-            this.width = width;
 
         }
         public override double Area()
