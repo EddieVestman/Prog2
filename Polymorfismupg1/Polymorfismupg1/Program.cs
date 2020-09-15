@@ -11,35 +11,33 @@ namespace Polymorfismupg1
         static void Main(string[] args)
         {
             Console.WriteLine("Vill du räkna på en rätvinklig triangel eller rektangel?");
-            string answer = Console.ReadLine();
+            while (true)
+            {
+                string answer = Console.ReadLine();
 
-            if (answer == "triangel")
-            {
-                Console.WriteLine("Skriv in en höjd och bredd");
-                int width = Convert.ToInt32(Console.ReadLine());
-                int height = Convert.ToInt32(Console.ReadLine());
-                Shape tri = new Triangle(width, height);
-                Console.WriteLine(tri.Area());
-                Console.WriteLine(tri.circumferance());
-
-            }
-            else if (answer == "recntagle")
-            {
-                Console.WriteLine("Skriv in en höjd och bredd");
-                int width = Convert.ToInt32(Console.ReadLine());
-                int height = Convert.ToInt32(Console.ReadLine());
-                Shape rec = new Rectangle(width, height);
-                Console.WriteLine(rec.Area());
-                Console.WriteLine(rec.circumferance());
-            }
-            else
-            {
+                if (answer == "triangel")
+                {
+                    Console.WriteLine("Skriv in en höjd och bredd");
+                    int width = Convert.ToInt32(Console.ReadLine());
+                    int height = Convert.ToInt32(Console.ReadLine());
+                    Shape tri = new Triangle(width, height);
+                    Console.WriteLine(tri.Area());
+                    Console.WriteLine(tri.circumferance());
+                    break;
+                }
+                else if (answer == "rectangle")
+                {
+                    Console.WriteLine("Skriv in en höjd och bredd");
+                    int width = Convert.ToInt32(Console.ReadLine());
+                    int height = Convert.ToInt32(Console.ReadLine());
+                    Shape rec = new Rectangle(width, height);
+                    Console.WriteLine(rec.Area());
+                    Console.WriteLine(rec.circumferance());
+                    break;
+                }
                 Console.WriteLine("Välj en!");
 
-
             }
-
-
         }
     }
 }
