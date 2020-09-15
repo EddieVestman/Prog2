@@ -6,23 +6,21 @@ using System.Threading.Tasks;
 
 namespace Interface1
 {
-    class Triangle : IShape
+    class Triangle : Shape
     {
-        private int width;
-        private int height;
-        public Triangle(int height, int width)
+        
+        public Triangle(int height, int width) : base(height, width)
         {
-            this.height = height;
-            this.width = width;
+         
 
         }
-        public double Area()
+        public override double Area() 
         {
             double area = width * height / 2;
             return area;
         }
 
-        public double circumferance()
+        public override double circumferance()
         {
             double circumferance = Math.Sqrt(width * width + height * height);
             return circumferance;

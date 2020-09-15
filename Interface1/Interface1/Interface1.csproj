@@ -7,7 +7,7 @@
     <ProjectGuid>{6999B968-7106-428E-8D1A-7AD79449C136}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Polymorfismupg1</RootNamespace>
-    <AssemblyName>Polymorfismupg1</AssemblyName>
+    <AssemblyName>Interface1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
