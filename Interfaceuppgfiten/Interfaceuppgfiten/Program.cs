@@ -35,6 +35,16 @@ namespace Interfaceuppgfiten
                     Console.WriteLine(rec.Circumferance());
                     break;
                 }
+
+                else if (answer == "cirkel")
+                {
+                    Console.WriteLine("Skriv in ett tal:");
+                    int radius = Convert.ToInt32(Console.ReadLine());
+                    IShape Circle = new Circle(radius) as IShape;
+                    Console.WriteLine(Circle.Area());
+                    Console.WriteLine(Circle.Circumferance());
+                    break;
+                }
                 Console.WriteLine("Välj en!");
 
             }
